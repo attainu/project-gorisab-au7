@@ -74,7 +74,7 @@ app.use((error, req, res, next) => {
   });
 });
 
-// heroku create $APP_NAME --buildpack mars/create-react-app
+
 // App's connection port
 const PORT = process.env.PORT || 8000;
 
