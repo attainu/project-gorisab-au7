@@ -65,36 +65,37 @@ class ProductsCarousel extends React.Component {
       ]
     };
     return (
-      <div className='featured-products'>
-        <h2>{this.props.title}</h2>
+      <div className='featured-products' style={{paddingTop:"35px", paddingBottom:"35px"}}>
+        <h2 style={{padding:"5", margin:"0", backgroundColor:"#2C767F", color:"#D8CFBE", marginBottom:"20px" }}>{this.props.title}</h2>
         {this.props.products.loading && <ProgressBar animated now={100} />}
         <Slider {...settings}>
           {!this.props.products.loading &&
             this.props.products.products.map(product => {
               return (
-                <Col key={product._id} className='product-card'>
+                <Col key={product._id} className='product-card' style={{ padding:"2px", margin:"0px"}}>
                   <Card>
                     <Link to={`/product/${product._id}`}>
                       <Card.Img
                         className='product-card-image'
+                        style ={{ margin:"0px", padding:"0px"}}
                         variant='top'
                         src={product.productImage[0]}
                       />
                     </Link>
 
-                    <Card.Body className='product-details'>
-                      <Card.Title className='product-name'>
+                    <Card.Body className='product-details' style={{paddingTop:"4px", paddingBottom:"4px"}}>
+                      <Card.Title className='product-name' style={{paddingTop:"4px", paddingBottom:"4px", marginBottom:"4px"}}>
                         <Link to={`/product/${product._id}`}>{product.name}</Link>
                       </Card.Title>
 
                       <Row>
                         <Col>
-                          <Card.Text className='product-price'>
-                            {"₹ " + product.price}
+                          <Card.Text className='product-price' style={{display:"flex" , alignItems:"center", paddingTop:"0px", paddingBottom:"0px", margin:"0px"}}>
+                          <p> {"₹ " + product.price + " "}KG</p>
                           </Card.Text>
                         </Col>
                         <Col>
-                          <p>KG</p>
+                          
                         </Col>
                       </Row>
                     </Card.Body>

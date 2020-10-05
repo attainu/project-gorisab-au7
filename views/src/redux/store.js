@@ -6,6 +6,8 @@ const store = createStore(
   rootReducer,
   compose(
     applyMiddleware(thunk)
+    // for redux dev tools
+    //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
 

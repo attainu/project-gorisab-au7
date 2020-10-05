@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast, Slide } from "react-toastify";
 import { registerNewUser } from "../../redux/actions/auth-actions/registerNewUser";
+import nariyal from '../../images/nariyal.png';
 
 // form validation useing Yup
 const validate = () =>
@@ -50,7 +51,14 @@ function SignUpForm(props) {
       });
   };
   return (
-    <Container>
+    <Container fluid>
+      <Row>
+      <Col md={6} className="signupLeft">
+      
+        <img src={nariyal} alt="Nariyal pani"/>
+        </Col>
+      
+      <Col md={6} className="signupRight">
       <Formik
         initialValues={{
           username: "",
@@ -175,6 +183,9 @@ function SignUpForm(props) {
           </Container>
         </div>
       </Formik>
+      </Col>
+      </Row>
+      
     </Container>
   );
 }

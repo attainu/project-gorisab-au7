@@ -30,7 +30,7 @@ function ChooseAddressToDeliver(props) {
   let loadingSpinner;
   if (loading && addresses.length === 0) {
     loadingSpinner = (
-      <Loader type='Circles' color='#123' height={100} width={100} className='spinner' />
+      <Loader type='TailSpin' color='#0f7d27' height={100} width={100} className='spinner' />
     );
   }
 

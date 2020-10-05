@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast, Slide } from "react-toastify";
 import { login } from "../../redux/actions/auth-actions/loginAction";
+import peanuts from '../../images/peanuts.png'
 
 // form validation useing Yup
 const validate = () =>
@@ -39,7 +40,13 @@ function LoginForm(props) {
   };
 
   return (
-    <Container>
+    <Container fluid>
+      <Row className="loginPageRow" style={{backgroundColor:"#F6F3DB"}}>
+        <Col className="loginLeft">
+          <img src={peanuts} />        
+        </Col>
+        <Col className="loginRight">
+          
       <Formik
         initialValues={{
           username: "",
@@ -101,6 +108,8 @@ function LoginForm(props) {
           </Container>
         </div>
       </Formik>
+        </Col>
+      </Row>
     </Container>
   );
 }

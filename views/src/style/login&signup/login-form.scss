@@ -6,12 +6,14 @@
       font-family: "Overpass", sans-serif;
 
       .form-horizontal {
-        background: linear-gradient(to right, #d6ebe4 49%, #d6ebe4 50%);
+//        background: linear-gradient(to right, #F6F3DB 49%, #F6F3DB 50%);
+        background-color:rgba(174, 214, 206, 0.3);
         width: 350px;
         height: 350px;
-        padding: 90px 55px;
-        margin: 0 auto;
+        padding: 70px 40px;
+        margin: 60px -50px auto;
         border-radius: 1%;
+        border: 1px solid #1C74BB;
 
         .form-container {
           .title {
@@ -31,15 +33,15 @@
 
   .form-horizontal {
     .form-group {
-      background-color: rgba(255, 255, 255, 0.15);
       font-size: 0;
       margin: 0 0 15px;
-      border: 1px solid #838585;
+      background-color: rgba(123, 164, 198, 0.5);
+      border: 1px solid #1C74BB;
       border-radius: 3px;
     }
 
     .input-icon {
-      color: #838585;
+      color: #1C74BB;
       font-size: 16px;
       text-align: center;
       line-height: 48px;
@@ -50,7 +52,7 @@
     }
 
     .form-control {
-      color: #838585;
+      color: #1C74BB;
       background-color: transparent;
       font-size: 14px;
       letter-spacing: 1px;
@@ -68,22 +70,22 @@
       &:focus {
         box-shadow: none;
         border: none;
-        color: #f4ffff;
+        color: #1C74BB;
         background-color: transparent;
       }
     }
 
     .btn {
       color: rgba(255, 255, 255, 0.8);
-      background: rgba(126, 116, 117, 0.95);
+      background: rgba(78, 64, 207, 0.95);
       font-size: 15px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1px;
       width: 100px;
-      height: 100px;
-      line-height: 120px;
-      margin: 40px 0 15px 0;
+      height: 50px;
+      line-height: 12px;
+      margin-top: 20px;
       border: none;
       border-radius: 1%;
       display: inline-block;
@@ -111,7 +113,7 @@
   /*Forgor password*/
   .form-horizontal {
     .forgot-pass {
-      color: #999;
+      color: #1C74BB;
       font-size: 12px;
       text-align: left;
       width: calc(100% - 125px);
@@ -119,7 +121,7 @@
       vertical-align: top;
 
       a {
-        color: #999;
+        color: #1C74BB;
         transition: all 0.3s ease;
 
         &:hover {

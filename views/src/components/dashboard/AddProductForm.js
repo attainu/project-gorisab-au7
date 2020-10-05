@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toast, Slide } from "react-toastify";
 import { fetchCategories } from "../../redux/actions/category-actions/fetchCategoriesAction";
 import { addProduct } from "../../redux/actions/product-actions/addProductAction";
-
+import  gannekajuice from "../../images/gannekajuice.png" 
 // form validation useing Yup
 const validate = () =>
   Yup.object({
@@ -61,12 +61,16 @@ function AddProductForm() {
 
   return (
     <Container fluid>
-      <Row>
-        <Col md='3'>
+      <Row style={{backgroundColor:"#F4EFD9"}}>
+        <Col md='2' style={{backgroundColor:"#F4EFD9", padding:"0px", margin:"0px"}}>
           <DashboardSidebar />
+        </Col >
+          
+        <Col md='6' style={{backgroundColor:"#F4EFD9", padding:"0px", marginLeft:"-30px", width:"fitContent"}}>
+            <img src={gannekajuice} />
         </Col>
-        <Col>
-          <h1 className='dashboard-headline'>Add product</h1>
+        <Col md='4' style={{backgroundColor:"#F4EFD9", padding:"0px"}}>
+          <h1 className='dashboard-headline' style={{textAlign:"center"}}>Add product</h1>
           <Formik
             initialValues={{
               name: "",
@@ -92,6 +96,7 @@ function AddProductForm() {
             }}>
             <Form
               className='add-category-form'
+              style={{ padding: "20px", margin: "10px", width: "80%"}}
               action='/api/product/create'
               method='post'
               encType='multipart/form-data'>

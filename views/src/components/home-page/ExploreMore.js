@@ -7,7 +7,7 @@ import mlk from "./../../assets/pictures/mlk.jpg";
 const ExploreMore = () => {
   return (
     <div className='explore-more'>
-      <h2>Explore More</h2>
+      <h2 style={{padding:"5", margin:"0", backgroundColor:"#2C767F", color:"#D8CFBE", marginBottom:"20px"}}>Explore More</h2>
       <Row>
         <Col md='4' sm='12' className='item'>
           <a href='/category/5f6c6224042ec424fce1c125'>
@@ -24,6 +24,8 @@ const ExploreMore = () => {
             <Image src={mlk} />
           </a>
         </Col>
+
+
       </Row>
     </div>
   );

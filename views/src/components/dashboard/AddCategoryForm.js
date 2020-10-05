@@ -6,6 +6,7 @@ import { addCategory } from "../../redux/actions/category-actions/addCategoryAct
 import { useDispatch } from "react-redux";
 import { toast, Slide } from "react-toastify";
 import DashboardSidebar from "./DashboardSidebar";
+import  gola from "../../images/gola.png" 
 
 // form validation useing Yup
 const validate = () =>
@@ -45,12 +46,15 @@ function AddCategoryForm() {
 
   return (
     <Container fluid>
-      <Row>
-        <Col md='3'>
+      <Row style={{backgroundColor:"#F7F4E3"}}>
+        <Col md='3' style={{backgroundColor:"#F7F4E3", padding:"0px", margin:"0px"}}>
           <DashboardSidebar />
         </Col>
-        <Col>
-          <h1 className='dashboard-headline'>Add Category</h1>
+        <Col  md='5' style={{backgroundColor:"#F7F4E3", padding:"0px", marginLeft:"-10px", width:"100%", height:"100%"}}>
+        <img src={gola} style={{ padding:"0px", width:"100%", height:"100%"}} />
+        </Col>
+        <Col  md='4' style={{backgroundColor:"#F7F4E3", padding:"0px"}}>
+          <h1 className='dashboard-headline' style={{textAlign:"center"}}>Add Category</h1>
           <Formik
             initialValues={{
               name: "",

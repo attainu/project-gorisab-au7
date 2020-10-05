@@ -25,7 +25,9 @@ const DashboardSidebar = props => {
             <li>
               <Link to='/dashboard/admin/admins_permissions'>All Admins</Link>
             </li>
-
+            <li>
+              <Link to='/dashboard/admin/shippers_permissions'>All Shippers</Link>
+            </li>
           </ul>
         </li>
       )}
@@ -43,7 +45,15 @@ const DashboardSidebar = props => {
             <li>
               <Link to='/editProducts'>Edit Products</Link>
             </li>
-
+            <li>
+              <Link to='/dashboard/seller/orders_to_ship'>
+                Orders to ship
+                <br />
+              </Link>
+            </li>
+            <li>
+              <Link to='/dashboard/seller/shipped_orders'>Shipped Orders</Link>
+            </li>
           </ul>
         </li>
       )}
@@ -52,7 +62,15 @@ const DashboardSidebar = props => {
         <i class='fa fa-truck' aria-hidden='true'></i>
         <h1>Hawker</h1>
         <ul>
-
+          <li>
+            <Link to='/dashboard/shipper/orders_to_deliver'>
+              Orders to Deliver
+              <br />
+            </Link>
+          </li>
+          <li>
+            <Link to='/dashboard/shipper/delivered_orders'>Delivered Orders</Link>
+          </li>
         </ul>
       </li>
     </ul>

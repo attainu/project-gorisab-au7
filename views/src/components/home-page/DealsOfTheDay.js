@@ -5,10 +5,8 @@ import ProductsCarousel from "./ProductsCarousel";
 const DealsOfTheDay = () => {
   return (
     <Row className='deals-of-the-day'>
-      <Col lg='3' className='title'>
-
-      </Col>
-      <Col lg='9'>
+      
+      <Col lg='12'>
         <ProductsCarousel productsNumber='3' />
       </Col>
     </Row>

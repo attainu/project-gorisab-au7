@@ -16,7 +16,7 @@ import { useLocation } from "react-router-dom";
 import { editAddress } from "../../redux/actions/address-actions/updateAddressAction";
 import { fetchAddresses } from "../../redux/actions/address-actions/fetchAddressesAction";
 
-// form validation useing Yup
+// validation useing Yup
 const validate = () =>
   Yup.object({
     firstName: Yup.string()
@@ -28,22 +28,13 @@ const validate = () =>
     address1: Yup.string()
       .min(2, "Must be more than 10 characters")
       .required("This field is required"),
-    address2: Yup.string().min(2, "Must be more than 10 characters"),
-    country: Yup.string()
-      .min(2, "Must be more than 10 characters")
-      .required("This field is required"),
-    state: Yup.string()
-      .min(2, "Must be more than 10 characters")
-      .required("This field is required"),
+    landmark: Yup.string().min(2, "Must be more than 10 characters"),
     city: Yup.string()
       .min(2, "Must be more than 10 characters")
       .required("This field is required"),
     street: Yup.string()
       .min(2, "Must be more than 10 characters")
       .required("This field is required"),
-    building: Yup.string().min(2, "Must be more than 10 characters"),
-    floor: Yup.string().min(2, "Must be more than 10 characters"),
-    apartment: Yup.string().min(2, "Must be more than 10 characters"),
     phoneNumber: Yup.number()
       .positive("Must be more than 0")
       .integer("Must be more than 0")
@@ -96,14 +87,9 @@ function EditAddressForm() {
       firstName: currentAddress[0].firstName,
       lastName: currentAddress[0].lastName,
       address1: currentAddress[0].address1,
-      address2: currentAddress[0].address2,
-      country: currentAddress[0].country,
-      state: currentAddress[0].state,
+      landmark: currentAddress[0].landmark,
       city: currentAddress[0].city,
       street: currentAddress[0].street,
-      building: currentAddress[0].building,
-      floor: currentAddress[0].floor,
-      apartment: currentAddress[0].apartment,
       phoneNumber: currentAddress[0].phoneNumber,
       postalCode: currentAddress[0].postalCode
     };
@@ -127,14 +113,9 @@ function EditAddressForm() {
               firstName: values.firstName,
               lastName: values.lastName,
               address1: values.address1,
-              address2: values.address2,
-              country: values.country,
-              state: values.state,
+              landmark: values.landmark,
               city: values.city,
               street: values.street,
-              building: values.building,
-              floor: values.floor,
-              apartment: values.apartment,
               phoneNumber: values.phoneNumber,
               postalCode: values.postalCode
             };
@@ -184,42 +165,16 @@ function EditAddressForm() {
               <ErrorMessage component={Toast} name='address1' />
             </div>
             <div className='form-group'>
-              <label>Address 2</label>
+              <label>Land Mark</label>
               <Field
                 type='text'
-                name='address2'
+                name='landmark'
                 className='form-control'
                 placeholder='Enter address'
               />
-              <ErrorMessage component={Toast} name='address2' />
+              <ErrorMessage component={Toast} name='landmark' />
             </div>
-            <Row>
-              <Col>
-                <div className='form-group'>
-                  <label>Country *</label>
-                  <Field
-                    type='text'
-                    name='country'
-                    className='form-control'
-                    placeholder='Enter country'
-                  />
-                  <ErrorMessage component={Toast} name='country' />
-                </div>
-              </Col>
-              <Col>
-                <div className='form-group'>
-                  <label>State *</label>
-                  <Field as='select' name='state' className='form-control'>
-                    <option value='' disabled selected>
-                      Choose City
-                    </option>
-                    <option value='Cairo'>Cairo</option>
-                    <option value='Alexandria'>Alexandria</option>
-                  </Field>
-                  <ErrorMessage component={Toast} name='state' />
-                </div>
-              </Col>
-            </Row>
+
             <Row>
               <Col>
                 <div className='form-group'>
@@ -246,44 +201,7 @@ function EditAddressForm() {
                 </div>
               </Col>
             </Row>
-            <Row>
-              <Col>
-                <div className='form-group'>
-                  <label>Building</label>
-                  <Field
-                    type='text'
-                    name='building'
-                    className='form-control'
-                    placeholder='Enter building'
-                  />
-                  <ErrorMessage component={Toast} name='building' />
-                </div>
-              </Col>
-              <Col>
-                <div className='form-group'>
-                  <label>Floor</label>
-                  <Field
-                    type='text'
-                    name='floor'
-                    className='form-control'
-                    placeholder='Enter floor'
-                  />
-                  <ErrorMessage component={Toast} name='floor' />
-                </div>
-              </Col>
-              <Col>
-                <div className='form-group'>
-                  <label>Apartment</label>
-                  <Field
-                    type='text'
-                    name='apartment'
-                    className='form-control'
-                    placeholder='Enter apartment'
-                  />
-                  <ErrorMessage component={Toast} name='apartment' />
-                </div>
-              </Col>
-            </Row>
+
             <Row>
               <Col>
                 <div className='form-group'>

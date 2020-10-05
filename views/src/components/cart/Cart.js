@@ -71,7 +71,7 @@ function Cart() {
           </Col>
         </Row>
 
-        <Table striped bordered hover variant='dark' className='cart-table'>
+        <Table striped bordered hover variant='light' className='cart-table'>
           <thead>
             <tr>
               <th>Item</th>

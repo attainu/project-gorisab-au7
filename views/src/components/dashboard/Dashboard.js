@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Page404 from "./../404";
 import DashboardSidebar from "./DashboardSidebar";
 import Loader from "react-loader-spinner";
+import icecream from '../../images/icecream.jpg'
 
 function Dashboard() {
   const { user, loading } = useSelector(state => state.userrr);
@@ -19,8 +20,11 @@ function Dashboard() {
           </Col>
           {user && (
             <Col className='welcome'>
+
               {" "}
+
               <h1>Welcome, {user.firstName}</h1>
+                            <img className="dashBoardImage" src={icecream}/>
             </Col>
           )}
           {loading && (
